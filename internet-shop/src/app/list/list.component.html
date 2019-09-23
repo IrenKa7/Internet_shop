@@ -1,0 +1,22 @@
+<div class="box">
+    count = {{cart.length}} <br>
+    amount = {{cartAmount}}
+</div>
+<div class="shopList">
+    <div *ngFor="let item of items" class="item">
+        <span>{{item.name}}</span>
+        <span>{{item.price}}</span>
+        <span>{{item.color}}</span>
+        <button (click)="addToCart(item)">add</button>
+        </div>
+</div>
+<div class="shopList">
+    <div *ngFor="let item of cart;let n=index" class="item">
+        <span>{{item.name}}</span>
+        <span>{{item.price}}</span>
+        <span>{{item.color}}</span>
+        <span>{{n}}</span>
+        <button (click)="removeFromCart(item)">remove</button>
+        </div>
+</div>
+
